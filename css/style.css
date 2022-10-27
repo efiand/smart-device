@@ -607,6 +607,29 @@ button,
   opacity: 0.8;
 }
 
+.contacts__link {
+  display: flex;
+  align-items: center;
+}
+
+.contacts__link::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  margin-right: 15px;
+  background-color: #00b2ff;
+}
+
+.contacts__link--mailto::before {
+  -webkit-mask: url("../img/sprite_auto.svg#mailto") no-repeat center/100%;
+  mask: url("../img/sprite_auto.svg#mailto") no-repeat center/100%;
+}
+
+.contacts__link--tel::before {
+  -webkit-mask: url("../img/sprite_auto.svg#tel") no-repeat center/100%;
+  mask: url("../img/sprite_auto.svg#tel") no-repeat center/100%;
+}
+
 .modal {
   position: fixed;
   top: 0;
