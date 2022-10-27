@@ -403,6 +403,7 @@ body {
 }
 
 html {
+  min-width: 320px;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -578,10 +579,12 @@ button,
 }
 
 .container {
+  box-sizing: border-box;
   width: 100%;
-  max-width: 1920px;
-  margin: 0 auto;
-  padding: 0 40px;
+  max-width: 1320px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 50px;
 }
 
 .btn {
@@ -759,21 +762,9 @@ button,
   }
 */
 
-@media (max-width: 1439px) {
-  .container {
-    padding: 0 32px;
-  }
-}
-
-@media (max-width: 1023px) {
-  .container {
-    padding: 0 24px;
-  }
-}
-
 @media (max-width: 767px) {
   .container {
-    padding: 0 16px;
+    padding: 0 25px;
   }
 
   .modal__wrapper {
