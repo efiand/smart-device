@@ -4,11 +4,19 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>{{ projectName }}</title>
-		<link rel="stylesheet" href="css/style.min.css">
+		<link rel="stylesheet" href="css/style.min.css{{ version }}">
 	</head>
 
 	<body>
+		{% if contacts %}
+			{% include '../components/page-header.twig' %}
+		{% endif %}
+
 		{% block main %}{% endblock %}
+
+		{% if contacts %}
+			{% include '../components/page-footer.twig' %}
+		{% endif %}
 
 		{% include 'scripts.twig' %}
 	</body>
