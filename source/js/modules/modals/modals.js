@@ -119,7 +119,9 @@ export class Modals {
     if (this._stopPlay) {
       modal.querySelectorAll('video, audio').forEach((el) => el.pause());
       modal.querySelectorAll('[data-iframe]').forEach((el) => {
-        el.querySelector('iframe').contentWindow.postMessage('{"event": "command", "func": "pauseVideo", "args": ""}', '*');
+        const options =
+          '{"event": "command", "func": "pauseVideo", "args": ""}';
+        el.querySelector('iframe').contentWindow.postMessage(options, '*');
       });
     }
   }
@@ -128,7 +130,8 @@ export class Modals {
     modal.querySelectorAll('[data-iframe]').forEach((el) => {
       const autoPlay = el.closest('[data-auto-play]');
       if (autoPlay) {
-        el.querySelector('iframe').contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+        const options = '{"event":"command","func":"playVideo","args":""}';
+        el.querySelector('iframe').contentWindow.postMessage(options, '*');
       }
     });
   }
