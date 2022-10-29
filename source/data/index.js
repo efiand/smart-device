@@ -25,5 +25,15 @@ export default {
       value: mainPhone.shortPhone,
     },
   ],
+  promo: {
+    content:
+      '<h2>Печатные платы</h2><p>производство и монтаж, поставка комплектующих, блоков и модулей</p>',
+    image: {
+      default: 'img/main-header.jpg',
+      default2x: 'img/main-header@2x.jpg',
+      webp: 'img/main-header.webp',
+      webp2x: 'img/main-header@2x.webp',
+    },
+  },
   slogan: 'умные технологии',
 };
