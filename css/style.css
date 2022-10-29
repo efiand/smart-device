@@ -586,8 +586,14 @@ input[type=number] {
   pointer-events: none;
 }
 
-.btn.focus-visible:focus {
+.btn:focus-visible {
   opacity: 0.8;
+}
+
+@supports not selector(:focus-visible) {
+  .btn.focus-visible:focus {
+    opacity: 0.8;
+  }
 }
 
 .contacts__link {
@@ -768,6 +774,7 @@ input[type=number] {
 }
 
 @media (hover: hover) {
+  .btn:hover:not(:focus-visible),
   .btn:hover:not(.focus-visible) {
     opacity: 0.8;
   }
