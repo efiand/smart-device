@@ -1,16 +1,8 @@
 .btn {
-  box-sizing: border-box;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-  transition: opacity $trans-default;
+  @include btn;
 
-  &:disabled {
-    opacity: 0.5;
-    pointer-events: none;
-  }
-
-  @include hover-focus {
-    opacity: 0.8;
-  }
+  padding: 11px 15px;
+  font-size: 14px;
+  line-height: 16px;
+  border: 1px solid;
 }

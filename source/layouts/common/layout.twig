@@ -8,16 +8,20 @@
 	</head>
 
 	<body>
-		{% if contacts %}
-			{% include '../components/page-header.twig' %}
-		{% endif %}
+		<div class="page">
+			{% block header %}
+				{% include '../components/page-header.twig' with { bemMix: 'page__header' } %}
+			{% endblock %}
 
-		{% block main %}{% endblock %}
+			<main class="page__main">
+				{% block main %}{% endblock %}
+			</main>
 
-		{% if contacts %}
-			{% include '../components/page-footer.twig' %}
-		{% endif %}
+			{% block footer %}
+				{% include '../components/page-footer.twig' with { bemMix: 'page__footer' } %}
+			{% endblock %}
 
-		{% include 'scripts.twig' %}
+			{% include 'scripts.twig' %}
+		</div>
 	</body>
 </html>

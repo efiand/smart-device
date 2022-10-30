@@ -12,13 +12,20 @@ $color-transparent: rgba($color-default-white, 0);
 
 $color-deep-sky-blue: #00b2ff;
 $color-black-pearl: #041827;
+$color-black-pearl-light: #192024;
+$color-alice-blue-light: #f2f5f6;
 
 // Gradient
 
 $gradient-black-pearl-to-transparent: linear-gradient(
   to top,
   $color-transparent,
-  $color-black-pearl 10px
+  $color-black-pearl 18px
+);
+
+$gradient-black-pearl-light-to-transparent: linear-gradient(
+  $color-black-pearl-light 70%,
+  $color-transparent
 );
 
 // Typography
@@ -31,7 +38,9 @@ $fz-default: 16px;
 // https://www.artlebedev.ru/kovodstvo/sections/159/#13
 $ff-rouble: "Rouble", "Arial", sans-serif;
 
+$ff-roboto: "Roboto", "Arial", sans-serif;
 $ff-roboto-condensed: "Roboto Condensed", "Arial", sans-serif;
+$ff-pt-mono: "PT Mono", "Courier New", monospace;
 
 // Animation
 // ---------------------------------

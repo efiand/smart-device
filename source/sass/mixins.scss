@@ -1,3 +1,25 @@
+@mixin btn {
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  font-family: $ff-roboto-condensed;
+  text-transform: uppercase;
+  text-align: center;
+  border-radius: 3px;
+  color: $color-alice-blue-light;
+  transition: opacity $trans-default;
+  cursor: pointer;
+
+  &:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  @include hover-focus {
+    opacity: 0.8;
+    outline: none;
+  }
+}
+
 @mixin retina {
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     @content;

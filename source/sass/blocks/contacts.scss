@@ -1,6 +1,19 @@
+.contacts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0;
+  list-style: none;
+}
+
+.contacts__item {
+  margin: 5px 20px;
+}
+
 .contacts__link {
   display: flex;
   align-items: center;
+  font-family: $ff-pt-mono;
 
   &::before {
     content: "";

@@ -1,5 +1,21 @@
 .page-header {
-  padding: 30px 0;
-  color: $color-default-white;
+  padding: 30px 0 41px;
+  color: $color-alice-blue-light;
   background-image: $gradient-black-pearl-to-transparent;
+}
+
+.page-header__inner {
+  display: grid;
+  grid-template-columns: minmax(210px, 28fr) 50fr 29fr;
+  gap: 75px;
+  align-items: center;
+}
+
+.page-header__contacts {
+  margin: 0;
+}
+
+.page-header__btn {
+  margin-left: 70px;
+  width: 160px;
 }
