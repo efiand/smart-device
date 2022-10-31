@@ -3,6 +3,7 @@
   display: flex;
   min-height: 880px;
   padding: 120px 0;
+  overflow: hidden;
   color: $color-alice-blue-light;
   background-color: $color-black-pearl;
 }
@@ -14,6 +15,7 @@
   bottom: 0;
   left: 0;
   max-width: none;
+  margin: 0 auto;
   object-fit: cover;
 }
 
@@ -27,7 +29,7 @@
     font-weight: 700;
     letter-spacing: 0.07em;
     font-size: 80px;
-    line-height: 93.75px;
+    line-height: 94px;
     text-transform: uppercase;
   }
 
