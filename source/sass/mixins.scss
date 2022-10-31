@@ -4,8 +4,9 @@
   font-family: $ff-roboto-condensed;
   text-transform: uppercase;
   text-align: center;
-  border-radius: 3px;
   color: $color-alice-blue-light;
+  background-color: transparent;
+  border-radius: 3px;
   transition: opacity $trans-default;
   cursor: pointer;
 
