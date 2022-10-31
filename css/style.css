@@ -434,7 +434,7 @@ template {
 html {
   min-width: 320px;
   font-size: 16px;
-  line-height: 1.34375;
+  line-height: 1.25;
   font-family: "Roboto Condensed", "Arial", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -669,6 +669,81 @@ input[type=number] {
   mask: url("../img/sprite_auto.svg#tel") no-repeat center/100%;
 }
 
+.content-card {
+  position: relative;
+  padding: 40px 45px 46px;
+  border: 1px solid #ebebeb;
+  transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.content-card::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  bottom: -1px;
+  left: -1px;
+  width: 5px;
+  background-color: #00b2ff;
+}
+
+.content-card img {
+  transition: filter 0.3s ease;
+  will-change: transition;
+}
+
+.content-card h3 {
+  margin: 0;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 35px;
+  color: #00b2ff;
+  transition: color 0.3s ease;
+}
+
+.content-card h3:nth-child(n+1) {
+  margin-top: 20px;
+}
+
+.content-card p {
+  margin: 0;
+  line-height: 22px;
+  font-family: "PT Mono", "Courier New", monospace;
+}
+
+.content-card p:nth-child(n+1) {
+  margin-top: 12px;
+}
+
+.content-card p:last-child {
+  min-height: 110px;
+}
+
+.content-card:hover {
+  color: #f2f5f6;
+  background-color: #00b2ff;
+  border-color: #00b2ff;
+}
+
+.content-card:hover img {
+  filter: grayscale(1) contrast(10);
+}
+
+.content-card:hover h3 {
+  color: inherit;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  padding: 0;
+  list-style: none;
+}
+
+.grid__card {
+  min-height: 100%;
+}
+
 .logo {
   position: relative;
   padding-left: 70px;
@@ -701,6 +776,7 @@ input[type=number] {
   display: flex;
   min-height: 880px;
   padding: 120px 0;
+  overflow: hidden;
   color: #f2f5f6;
   background-color: #041827;
 }
@@ -712,6 +788,7 @@ input[type=number] {
   bottom: 0;
   left: 0;
   max-width: none;
+  margin: 0 auto;
   -o-object-fit: cover;
   object-fit: cover;
 }
@@ -727,7 +804,7 @@ input[type=number] {
   font-weight: 700;
   letter-spacing: 0.07em;
   font-size: 80px;
-  line-height: 93.75px;
+  line-height: 94px;
   text-transform: uppercase;
 }
 
@@ -804,8 +881,20 @@ input[type=number] {
 }
 
 .page-header__btn {
-  margin-left: 70px;
   width: 160px;
+  margin-left: 70px;
+}
+
+.page-main__header + .page-main__section {
+  margin-top: 120px;
+}
+
+.page-main__section {
+  margin-bottom: 120px;
+}
+
+.page-main__grid {
+  margin: 0;
 }
 
 .modal {
