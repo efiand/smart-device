@@ -439,6 +439,7 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  color: #041827;
 }
 
 body {
@@ -606,8 +607,9 @@ input[type=number] {
   font-family: "Roboto Condensed", "Arial", sans-serif;
   text-transform: uppercase;
   text-align: center;
-  border-radius: 3px;
   color: #f2f5f6;
+  background-color: transparent;
+  border-radius: 3px;
   transition: opacity 0.3s ease;
   cursor: pointer;
   padding: 11px 15px;
@@ -717,18 +719,41 @@ input[type=number] {
   min-height: 110px;
 }
 
-.content-card:hover {
-  color: #f2f5f6;
-  background-color: #00b2ff;
-  border-color: #00b2ff;
+.content-section {
+  display: flex;
 }
 
-.content-card:hover img {
-  filter: grayscale(1) contrast(10);
+.content-section__image {
+  flex-shrink: 0;
+  margin-right: 100px;
 }
 
-.content-card:hover h3 {
-  color: #f2f5f6;
+.content-section__body h2 {
+  margin: 0 0 13px;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 50px;
+}
+
+.content-section__body p {
+  margin: 0;
+  line-height: 22px;
+  font-family: "PT Mono", "Courier New", monospace;
+}
+
+.content-section__body p + p {
+  margin-top: 20px;
+}
+
+.content-section__body--closed p:nth-of-type(n + 3) {
+  display: none;
+}
+
+.content-section__btn {
+  min-width: 180px;
+  min-height: 45px;
+  margin-top: 40px;
+  color: #00b2ff;
 }
 
 .grid {
@@ -820,8 +845,9 @@ input[type=number] {
   font-family: "Roboto Condensed", "Arial", sans-serif;
   text-transform: uppercase;
   text-align: center;
-  border-radius: 3px;
   color: #f2f5f6;
+  background-color: transparent;
+  border-radius: 3px;
   transition: opacity 0.3s ease;
   cursor: pointer;
   display: table;
@@ -1049,6 +1075,23 @@ input[type=number] {
   .btn:hover:not(.focus-visible) {
     opacity: 0.8;
     outline: none;
+  }
+
+  .content-card:hover:not(:focus-visible),
+  .content-card:hover:not(.focus-visible) {
+    color: #f2f5f6;
+    background-color: #00b2ff;
+    border-color: #00b2ff;
+  }
+
+  .content-card:hover:not(:focus-visible) img,
+  .content-card:hover:not(.focus-visible) img {
+    filter: grayscale(1) contrast(10);
+  }
+
+  .content-card:hover:not(:focus-visible) h3,
+  .content-card:hover:not(.focus-visible) h3 {
+    color: #f2f5f6;
   }
 
   .main-header__btn:hover:not(:focus-visible),
