@@ -688,7 +688,6 @@ input[type=number] {
 
 .content-card img {
   transition: filter 0.3s ease;
-  will-change: transition;
 }
 
 .content-card h3 {
@@ -729,7 +728,7 @@ input[type=number] {
 }
 
 .content-card:hover h3 {
-  color: inherit;
+  color: #f2f5f6;
 }
 
 .grid {
