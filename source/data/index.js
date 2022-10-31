@@ -77,4 +77,45 @@ export default {
       url: '#!',
     },
   },
+  services: {
+    heading: 'Smart Device предлагает следующие товары и услуги',
+    list: [
+      {
+        image: {
+          default: 'img/service-1.jpg',
+          default2x: 'img/service-1@2x.jpg',
+          webp: 'img/service-1.webp',
+          webp2x: 'img/service-1@2x.webp',
+        },
+        link: {
+          title: 'Производство печатных плат',
+          url: '#!',
+        },
+      },
+      {
+        image: {
+          default: 'img/service-2.jpg',
+          default2x: 'img/service-2@2x.jpg',
+          webp: 'img/service-2.webp',
+          webp2x: 'img/service-2@2x.webp',
+        },
+        link: {
+          title: 'Монтаж печатных плат',
+          url: '#!',
+        },
+      },
+      {
+        image: {
+          default: 'img/service-3.jpg',
+          default2x: 'img/service-3@2x.jpg',
+          webp: 'img/service-3.webp',
+          webp2x: 'img/service-3@2x.webp',
+        },
+        link: {
+          title: 'Комплектующие для&nbsp;светотехники',
+          url: '#!',
+        },
+      },
+    ],
+  },
 };
