@@ -13,7 +13,7 @@ const compileLayouts = () =>
   gulp
     .src('source/layouts/pages/**/*.twig')
     .pipe(
-      getData(async ({ path }) => {
+      getData(async ({path}) => {
         const page = path
           .replace(/^.*pages(\\+|\/+)(.*)\.twig$/, '$2')
           .replace(/\\/g, '/');
@@ -38,11 +38,22 @@ const compileLayouts = () =>
           ...pageData.default,
           isDev,
           page,
-          version: isDev ? `?${versionId}` : ''
+          version: isDev ? `?${versionId}` : '',
         };
       })
     )
-    .pipe(createHtml())
+    .pipe(
+      createHtml({
+        functions: [
+          {
+            name: 'contains',
+            func(str, pattern) {
+              return str.includes(pattern);
+            },
+          },
+        ],
+      })
+    )
     .pipe(processHtml())
     .pipe(validateBem())
     .pipe(useCondition(!lintMode, prettier()))

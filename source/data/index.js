@@ -34,26 +34,26 @@ export default {
     },
   },
   advantages: [
-    html`<img src="img/svg/stopwatch.svg" width="35" height="35" alt="" />
+    html`<img src="img/svg/stopwatch.svg" alt width="35" height="35" />
       <h3>Оперативные сроки</h3>
       <p>
         Усовершенствованная логистическая система позволяет нам просчитывать
         стоимость, производить и доставлять заказы плат и комплектующих в самые
         короткие сроки
       </p>`,
-    html`<img src="img/svg/hired.svg" width="35" height="35" alt="" />
+    html`<img src="img/svg/hired.svg" alt width="35" height="35" />
       <h3>Крупные поставщики</h3>
       <p>
         Нашими поставщиками являются такие крупные мировые компании как: OSRAM,
         CREE, HOLGLITRONIC, REFOND. Сотрудничество с такими компаниями
         обеспечивает хорошее качество нашей продукции.
       </p>`,
-    html`<img src="img/svg/detective.svg" width="35" height="35" alt="" />
+    html`<img src="img/svg/detective.svg" alt width="35" height="35" />
       <h3>Полная конфиденциальность</h3>
       <p>
         По желанию клиента&nbsp; мы обеспечиваем полную конфиденциальность.
       </p>`,
-    html`<img src="img/svg/tag.svg" width="35" height="35" alt="" />
+    html`<img src="img/svg/tag.svg" alt width="35" height="35" />
       <h3>Персонализация стоимости</h3>
       <p>
         Мы&nbsp; подбираем определенную фабрику, поставщиков, вид доставки,
@@ -61,6 +61,57 @@ export default {
       </p>`,
   ],
   advantagesHeading: 'Преимущества.',
+  feedback: {
+    content: html`<h2>Остались вопросы? Задайте их нам!</h2>
+      <p>Мы проконсультируем Вас бесплатно</p>
+      <form action="https://echo.htmlacademy.ru">
+        <input
+          id="feedback-name"
+          name="name"
+          type="text"
+          placeholder="Имя"
+          required
+        />
+        <label class="visually-hidden" for="feedback-name">Имя</label>
+
+        <input
+          id="feedback-phone"
+          name="phone"
+          type="tel"
+          placeholder="Телефон"
+          required
+        />
+        <label class="visually-hidden" for="feedback-phone">Телефон</label>
+
+        <textarea
+          name="message"
+          id="feedback-message"
+          placeholder="Ваш вопрос"
+        ></textarea>
+        <label class="visually-hidden" for="feedback-message">
+          Ваш вопрос
+        </label>
+
+        <button type="submit">Задать вопрос</button>
+
+        <label>
+          <input
+            name="agree"
+            type="checkbox"
+            checked
+            required
+          />
+          Я согласен на обработку персональных данных
+        </label>
+      </form>`,
+    id: 'feedback',
+    image: {
+      default: 'img/plane.png',
+      default2x: 'img/plane@2x.png',
+      webp: 'img/plane.webp',
+      webp2x: 'img/plane@2x.webp',
+    },
+  },
   promo: {
     content: html`<h2>Печатные платы</h2>
       <p>

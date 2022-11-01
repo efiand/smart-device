@@ -1,11 +1,15 @@
-<section class="content-section container {{ bemMix }}" data-content-section>
-	{% if image %}
-		<div class="content-section__image">
-			{% include 'picture.twig' with { image } %}
-		</div>
-	{% endif %}
+{% set hasForm = contains(content, '<form') %}
 
-	<div class="content-section__body">
-		{{ content }}
+<section class="content-section {{ hasForm ? 'content-section--form' }} {{ bemMix }}" data-content-section>
+	<div class="content-section__inner container">
+		{% if image %}
+			<div class="content-section__image">
+				{% include 'picture.twig' with { image } %}
+			</div>
+		{% endif %}
+
+		<div class="content-section__body">
+			{{ content }}
+		</div>
 	</div>
 </section>
