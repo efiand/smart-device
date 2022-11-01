@@ -13,6 +13,7 @@
 
 html {
   min-width: 320px;
+  scroll-behavior: smooth;
   font-size: $fz_default;
   line-height: 1.25;
   font-family: $ff-roboto-condensed;
