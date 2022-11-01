@@ -779,12 +779,27 @@ input[type=number] {
   min-height: 110px;
 }
 
-.content-section {
+.content-section--form {
+  padding: 165px 0 0;
+  color: #ffffff;
+  background-color: #00b2ff;
+}
+
+.content-section--form .content-section__body {
+  padding-left: 15px;
+}
+
+.content-section--form .content-section__body > p {
+  margin-left: 5px;
+}
+
+.content-section__inner {
   display: flex;
 }
 
 .content-section__image {
   flex-shrink: 0;
+  max-width: 50%;
   margin-right: 100px;
 }
 
@@ -814,6 +829,69 @@ input[type=number] {
   min-height: 45px;
   margin-top: 40px;
   color: #00b2ff;
+}
+
+.content-section form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px 30px;
+  margin: 35px 10px 0 5px;
+}
+
+.content-section form p {
+  margin: 0;
+}
+
+.content-section form p:has(textarea) {
+  grid-column: span 2;
+}
+
+.content-section form input:not([type=checkbox]),
+.content-section form textarea {
+  width: 100%;
+  padding: 15px 15px 17px 15px;
+  font-family: "PT Mono", "Courier New", monospace;
+  background-color: rgba(4, 24, 39, 0.15);
+  border: none;
+  border-radius: 3px;
+  color: inherit;
+}
+
+.content-section form textarea {
+  grid-column: 1/-1;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  min-height: 155px;
+}
+
+.content-section form button {
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  color: #f2f5f6;
+  background-color: transparent;
+  border-radius: 3px;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+}
+
+.content-section form button:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.content-section form button:focus-visible {
+  opacity: 0.8;
+  outline: none;
+}
+
+@supports not selector(:focus-visible) {
+  .content-section form button.focus-visible:focus {
+    opacity: 0.8;
+    outline: none;
+  }
 }
 
 .grid {
@@ -1156,6 +1234,12 @@ input[type=number] {
   .content-card:hover:not(:focus-visible) h3,
   .content-card:hover:not(.focus-visible) h3 {
     color: #f2f5f6;
+  }
+
+  .content-section form button:hover:not(:focus-visible),
+  .content-section form button:hover:not(.focus-visible) {
+    opacity: 0.8;
+    outline: none;
   }
 
   .main-header__btn:hover:not(:focus-visible),
