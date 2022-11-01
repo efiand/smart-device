@@ -1,0 +1,31 @@
+.spoiler {
+  padding: 5px 0;
+}
+
+.spoiler__heading {
+  margin: 0 0 20px;
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.spoiler__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  opacity: 0.7;
+}
+
+.spoiler__item {
+  margin-bottom: 8px;
+  line-height: 22px;
+  font-family: $ff-pt-mono;
+  break-inside: avoid-column;
+}
+
+.spoiler__link {
+  @include hover {
+    text-decoration: underline;
+  }
+}

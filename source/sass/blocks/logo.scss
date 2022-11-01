@@ -1,6 +1,6 @@
 .logo {
   position: relative;
-  padding-left: 70px;
+  padding: 4px 0 0 70px;
 }
 
 .logo__image {
@@ -10,7 +10,8 @@
 }
 
 .logo__title {
-  margin: 4px 0 2px;
+  display: block;
+  margin: 0 0 2px;
   font-weight: 700;
   font-size: 25px;
   line-height: 29px;
@@ -23,4 +24,8 @@
   line-height: 14px;
   font-family: $ff-roboto;
   opacity: 0.7;
+}
+
+b + .logo__description {
+  color: $color-alice-blue-light;
 }

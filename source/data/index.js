@@ -125,7 +125,7 @@ export default {
     },
     link: {
       title: 'Получить бесплатную консультацию',
-      url: '#!',
+      url: '#feedback',
     },
   },
   services: {

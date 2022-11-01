@@ -1,0 +1,5 @@
+{% extends '../common/layout.twig' %}
+
+{% block main %}
+	{% include '../components/main-header.twig' with promo|merge({ bemMix: 'page-main__header' }) %}
+{% endblock %}

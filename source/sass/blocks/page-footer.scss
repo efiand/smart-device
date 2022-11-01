@@ -1,0 +1,23 @@
+.page-footer {
+  padding: 50px 0 20px;
+  color: $color-default-white;
+  background-color: $color-black-pearl;
+}
+
+.page-footer__inner {
+  display: grid;
+  grid-template-columns: 335fr 460fr 345fr;
+  gap: 40px;
+  align-items: start;
+
+  :nth-child(2) {
+    ul {
+      column-count: 2; // Pixelperfect
+      column-gap: 40px;
+    }
+
+    li:last-child {
+      margin-bottom: 60px; // Pixelperfect
+    }
+  }
+}

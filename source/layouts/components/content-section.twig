@@ -1,6 +1,10 @@
 {% set hasForm = contains(content, '<form') %}
 
-<section class="content-section {{ hasForm ? 'content-section--form' }} {{ bemMix }}" data-content-section>
+<section
+	class="content-section {{ hasForm ? 'content-section--form' }} {{ bemMix }}"
+	{{ id ? 'id="' ~ id ~ '"' }}
+	data-content-section
+>
 	<div class="content-section__inner container">
 		{% if image %}
 			<div class="content-section__image">

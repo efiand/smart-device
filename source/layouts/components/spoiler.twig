@@ -1,0 +1,11 @@
+<div class="spoiler {{ bemMix }}" data-spoiler>
+	<h2 class="spoiler__heading">{{ heading }}</h2>
+
+	<ul class="spoiler__list">
+		{% for item in list %}
+			<li class="spoiler__item">
+				<a class="spoiler__link" href="{{ item.url }}">{{ item.title }}</a>
+			</li>
+		{% endfor %}
+	</ul>
+</div>
