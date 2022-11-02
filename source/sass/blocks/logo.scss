@@ -29,3 +29,19 @@
 b + .logo__description {
   color: $color-alice-blue-light;
 }
+
+.logo--headable {
+  @include vp-767 {
+    padding: 0;
+
+    .logo__title,
+    .logo__description {
+      display: none;
+    }
+
+    .logo__image {
+      position: static;
+      width: 35px;
+    }
+  }
+}

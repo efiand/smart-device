@@ -1,5 +1,6 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
+import initAccordeon from './modules/accordeon';
 import initContentSection from './modules/content-section';
 
 // ---------------------------------
@@ -16,8 +17,11 @@ window.addEventListener('DOMContentLoaded', () => {
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
-    const contentSections = document.querySelectorAll('[data-content-section]');
-    contentSections.forEach(initContentSection);
+    const contentElements = document.querySelectorAll('[data-content-section]');
+    contentElements.forEach(initContentSection);
+
+    const accordeonElements = document.querySelectorAll('[data-accordeon]');
+    accordeonElements.forEach(initAccordeon);
 
     initModals();
   });

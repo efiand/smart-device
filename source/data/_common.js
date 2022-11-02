@@ -11,6 +11,7 @@ const [mainPhone, ...additionalPhones] = [
 export default {
   addressLinks: {
     heading: 'Наш офис',
+    id: 'contacts',
     list: [
       {
         title: 'г. Мытищи, Олимпийский проспект, д.10',
@@ -40,6 +41,7 @@ export default {
   projectName: 'Smart Device',
   sitemapLinks: {
     heading: 'Разделы сайта',
+    id: 'sitemap',
     list: [
       'О Компании',
       'Продукты',
@@ -54,4 +56,5 @@ export default {
     })),
   },
   slogan: 'умные технологии',
+  spoilerTogglerText: 'Список ссылок.',
 };

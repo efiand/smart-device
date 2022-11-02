@@ -1,7 +1,11 @@
-<div class="spoiler {{ bemMix }}" data-spoiler>
+<div class="spoiler {{ bemMix }}">
 	<h2 class="spoiler__heading">{{ heading }}</h2>
 
-	<ul class="spoiler__list">
+	<button class="spoiler__toggler" type="button" aria-controls="spoiler-{{ id }}" aria-expanded="false">
+		<span class="visually-hidden">{{ spoilerTogglerText }}</span>
+	</button>
+
+	<ul class="spoiler__list" id="spoiler-{{ id }}">
 		{% for item in list %}
 			<li class="spoiler__item">
 				<a class="spoiler__link" href="{{ item.url }}">{{ item.title }}</a>
