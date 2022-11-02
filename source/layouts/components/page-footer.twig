@@ -1,9 +1,11 @@
 <footer class="page-footer {{ bemMix }}">
 	<div class="page-footer__inner container">
-		{% include 'logo.twig' with { bemMix: 'page-footer__logo' }  %}
+		{% include 'logo.twig' with { bemMix: 'page-footer__logo' } %}
 
-		{% include 'spoiler.twig' with sitemapLinks|merge({ bemMix: '' })  %}
+		{% include 'socials.twig' with { bemMix: 'page-footer__socials', socials } %}
 
-		{% include 'spoiler.twig' with addressLinks|merge({ bemMix: '' })  %}
+		{% include 'spoiler.twig' with sitemapLinks|merge({ bemMix: 'page-footer__spoiler page-footer__spoiler--sitemap' }) %}
+
+		{% include 'spoiler.twig' with addressLinks|merge({ bemMix: 'page-footer__spoiler' }) %}
 	</div>
 </footer>

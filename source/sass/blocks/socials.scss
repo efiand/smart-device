@@ -1,0 +1,31 @@
+.socials {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  padding: 0;
+  list-style: none;
+}
+
+.socials__link {
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-size: contain;
+  transition: opacity $trans-default;
+
+  @include hover {
+    opacity: 0.8;
+  }
+
+  &--ok {
+    background-image: url("../img/sprite_auto.svg#social-ok");
+  }
+
+  &--vk {
+    background-image: url("../img/sprite_auto.svg#social-vk");
+  }
+
+  &--pinterest {
+    background-image: url("../img/sprite_auto.svg#social-pinterest");
+  }
+}

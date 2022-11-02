@@ -6,11 +6,29 @@
 
 .page-footer__inner {
   display: grid;
+  grid-template-rows: min-content 1fr;
   grid-template-columns: 335fr 460fr 345fr;
+  grid-template-areas: "logo sitemap contacts" "socials sitemap contacts";
   gap: 40px;
   align-items: start;
+}
 
-  :nth-child(2) {
+.page-footer__logo {
+  grid-area: logo;
+}
+
+.page-footer__socials {
+  grid-area: socials;
+  justify-self: start;
+  margin: 0 0 0 15px;
+}
+
+.page-footer__spoiler {
+  grid-area: contacts;
+
+  &--sitemap {
+    grid-area: sitemap;
+
     ul {
       column-count: 2; // Pixelperfect
       column-gap: 40px;
