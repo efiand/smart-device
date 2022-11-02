@@ -6,6 +6,10 @@
     background-color: $color-deep-sky-blue;
     background-image: linear-gradient();
 
+    @include vp-1023 {
+      padding: 45px 0 118px;
+    }
+
     &::before {
       content: "";
       position: absolute;
@@ -15,18 +19,46 @@
       clip-path: polygon(0 0, 100% 0, 0 100%);
       width: calc(50% + 10px);
       background-color: rgba($color-black-pearl, 0.5);
+
+      @include vp-1023 {
+        display: none;
+      }
     }
 
     .content-section__body {
-      padding-left: 15px;
+      padding-left: 15px; // Pixelperfect
 
       > p {
         margin-left: 5px; // Pixelperfect
+      }
+
+      @include vp-1023 {
+        padding-left: 0;
+
+        h2 {
+          margin-bottom: 8px;
+        }
+
+        > p {
+          margin-left: 0;
+        }
       }
     }
 
     .content-section__image {
       margin-top: 6px; // Pixelperfect
+
+      @include vp-1023 {
+        display: none;
+      }
+    }
+  }
+
+  &:not(&--form) {
+    h2 {
+      @include vp-1023 {
+        margin-top: -4px; // Pixelperfect
+      }
     }
   }
 }
@@ -44,6 +76,14 @@
   flex-shrink: 0;
   max-width: 42%;
   margin-right: 100px;
+
+  @include vp-1023 {
+    margin-right: 24px;
+
+    img {
+      transform: translateX(-5px); // Pixelperfect
+    }
+  }
 }
 
 .content-section__body {
@@ -56,11 +96,11 @@
 
   p {
     margin: 0;
-    line-height: 22px;
+    line-height: 21.5px;
     font-family: $ff-pt-mono;
 
     + p {
-      margin-top: 20px;
+      margin-top: 22px;
     }
   }
 
@@ -76,6 +116,10 @@
   min-height: 45px;
   margin-top: 40px;
   color: $color-deep-sky-blue;
+
+  @include vp-1023 {
+    margin-top: 18px;
+  }
 }
 
 .content-section form {
@@ -83,6 +127,10 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 20px 30px;
   margin: 35px 10px 0 5px;
+
+  @include vp-1023 {
+    margin: 25px 0 0;
+  }
 
   p {
     margin: 0;
@@ -109,6 +157,11 @@
     padding-bottom: 24px;
     min-height: 155px;
     margin-bottom: 15px;
+
+    @include vp-1023 {
+      padding-top: 32px;
+      padding-bottom: 32px;
+    }
   }
 
   button {
@@ -119,6 +172,10 @@
     padding: 15px 20px 11px;
     background-color: $color-black-pearl;
     border: none;
+
+    @include vp-1023 {
+      margin-right: 54px;
+    }
   }
 
   [type="checkbox"] {
@@ -155,7 +212,16 @@
     cursor: pointer;
 
     [type="checkbox"] {
-      margin: -1px 10px 0 0;
+      margin-top: -1px; // Pixelperfect
+      margin-right: 10px;
+    }
+
+    @include vp-1023 {
+      padding: 10px 0;
+
+      [type="checkbox"] {
+        margin-top: -2px; // Pixelperfect
+      }
     }
   }
 }
