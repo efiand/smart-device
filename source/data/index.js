@@ -95,12 +95,7 @@ export default {
         <button type="submit">Задать вопрос</button>
 
         <label>
-          <input
-            name="agree"
-            type="checkbox"
-            checked
-            required
-          />
+          <input name="agree" type="checkbox" checked required />
           Я согласен на обработку персональных данных
         </label>
       </form>`,
@@ -135,8 +130,16 @@ export default {
         image: {
           default: 'img/service-1.jpg',
           default2x: 'img/service-1@2x.jpg',
+          defaultMobile: 'img/service-1-mobile.jpg',
+          defaultMobile2x: 'img/service-1-mobile@2x.jpg',
+          defaultTablet: 'img/service-1-tablet.jpg',
+          defaultTablet2x: 'img/service-1-tablet@2x.jpg',
           webp: 'img/service-1.webp',
           webp2x: 'img/service-1@2x.webp',
+          webpMobile: 'img/service-1-mobile.webp',
+          webpMobile2x: 'img/service-1-mobile@2x.webp',
+          webpTablet: 'img/service-1-tablet.webp',
+          webpTablet2x: 'img/service-1-tablet@2x.webp',
         },
         link: {
           title: 'Производство печатных плат',
@@ -147,8 +150,16 @@ export default {
         image: {
           default: 'img/service-2.jpg',
           default2x: 'img/service-2@2x.jpg',
+          defaultMobile: 'img/service-2-mobile.jpg',
+          defaultMobile2x: 'img/service-2-mobile@2x.jpg',
+          defaultTablet: 'img/service-2-tablet.jpg',
+          defaultTablet2x: 'img/service-2-tablet@2x.jpg',
           webp: 'img/service-2.webp',
           webp2x: 'img/service-2@2x.webp',
+          webpMobile: 'img/service-2-mobile.webp',
+          webpMobile2x: 'img/service-2-mobile@2x.webp',
+          webpTablet: 'img/service-2-tablet.webp',
+          webpTablet2x: 'img/service-2-tablet@2x.webp',
         },
         link: {
           title: 'Монтаж печатных плат',
@@ -159,8 +170,16 @@ export default {
         image: {
           default: 'img/service-3.jpg',
           default2x: 'img/service-3@2x.jpg',
+          defaultMobile: 'img/service-3-mobile.jpg',
+          defaultMobile2x: 'img/service-3-mobile@2x.jpg',
+          defaultTablet: 'img/service-3-tablet.jpg',
+          defaultTablet2x: 'img/service-3-tablet@2x.jpg',
           webp: 'img/service-3.webp',
           webp2x: 'img/service-3@2x.webp',
+          webpMobile: 'img/service-3-mobile.webp',
+          webpMobile2x: 'img/service-3-mobile@2x.webp',
+          webpTablet: 'img/service-3-tablet.webp',
+          webpTablet2x: 'img/service-3-tablet@2x.webp',
         },
         link: {
           title: 'Комплектующие для&nbsp;светотехники',
