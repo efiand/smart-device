@@ -26,7 +26,7 @@
     <div class="page">
       <header class="page-header page__header">
         <div class="page-header__inner container">
-          <div class="logo">
+          <div class="logo logo--headable">
             <img
               class="logo__image"
               src="img/svg/logo.svg"
@@ -85,7 +85,7 @@
       </main>
 
       <footer class="page-footer page__footer">
-        <div class="page-footer__inner container">
+        <div class="page-footer__inner container" data-accordeon="">
           <div class="logo page-footer__logo">
             <img
               class="logo__image"
@@ -102,11 +102,18 @@
           <ul class="socials page-footer__socials"></ul>
 
           <div
-            class="spoiler page-footer__spoiler page-footer__spoiler--sitemap"
-            data-spoiler="">
+            class="spoiler page-footer__spoiler page-footer__spoiler--sitemap">
             <h2 class="spoiler__heading">Разделы сайта</h2>
 
-            <ul class="spoiler__list">
+            <button
+              class="spoiler__toggler"
+              type="button"
+              aria-controls="spoiler-sitemap"
+              aria-expanded="false">
+              <span class="visually-hidden">Список ссылок.</span>
+            </button>
+
+            <ul class="spoiler__list" id="spoiler-sitemap">
               <li class="spoiler__item">
                 <a class="spoiler__link" href="#!">О Компании</a>
               </li>
@@ -133,10 +140,18 @@
             </ul>
           </div>
 
-          <div class="spoiler page-footer__spoiler" data-spoiler="">
+          <div class="spoiler page-footer__spoiler">
             <h2 class="spoiler__heading">Наш офис</h2>
 
-            <ul class="spoiler__list">
+            <button
+              class="spoiler__toggler"
+              type="button"
+              aria-controls="spoiler-contacts"
+              aria-expanded="false">
+              <span class="visually-hidden">Список ссылок.</span>
+            </button>
+
+            <ul class="spoiler__list" id="spoiler-contacts">
               <li class="spoiler__item">
                 <a
                   class="spoiler__link"
