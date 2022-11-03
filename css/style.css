@@ -233,17 +233,6 @@ button::-moz-focus-inner,
 }
 
 /**
-* Restore the focus styles unset by the previous rule.
-*/
-
-button:-moz-focusring,
-[type=button]:-moz-focusring,
-[type=reset]:-moz-focusring,
-[type=submit]:-moz-focusring {
-  outline: 1px dotted ButtonText;
-}
-
-/**
 * Correct the padding in Firefox.
 */
 
@@ -445,7 +434,6 @@ html {
 
 body {
   margin: 0;
-  min-height: 100vh;
 }
 
 a {
@@ -479,12 +467,14 @@ textarea {
 
 input::-moz-placeholder,
 textarea::-moz-placeholder {
-  opacity: 1;
+  color: inherit;
+  opacity: 0.6;
 }
 
 input::placeholder,
 textarea::placeholder {
-  opacity: 1;
+  color: inherit;
+  opacity: 0.6;
 }
 
 input:invalid,
@@ -593,8 +583,11 @@ input[type=number] {
   color: #f2f5f6;
   background-color: transparent;
   border-radius: 3px;
-  transition: opacity 0.3s ease;
   cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  transition: opacity 0.3s ease;
   padding: 11px 15px 10px;
   font-size: 14px;
   line-height: 17px;
@@ -608,13 +601,11 @@ input[type=number] {
 
 .btn:focus-visible {
   opacity: 0.8;
-  outline: none;
 }
 
 @supports not selector(:focus-visible) {
   .btn.focus-visible:focus {
     opacity: 0.8;
-    outline: none;
   }
 }
 
@@ -658,6 +649,17 @@ input[type=number] {
   display: block;
   min-height: 650px;
   padding: 48px 40px 100px;
+  transition: opacity 0.3s ease;
+}
+
+.catalog__link:focus-visible {
+  opacity: 0.8;
+}
+
+@supports not selector(:focus-visible) {
+  .catalog__link.focus-visible:focus {
+    opacity: 0.8;
+  }
 }
 
 .catalog__link::before {
@@ -698,6 +700,17 @@ input[type=number] {
   display: flex;
   align-items: center;
   font-family: "PT Mono", "Courier New", monospace;
+  transition: opacity 0.3s ease;
+}
+
+.contacts__link:focus-visible {
+  opacity: 0.8;
+}
+
+@supports not selector(:focus-visible) {
+  .contacts__link.focus-visible:focus {
+    opacity: 0.8;
+  }
 }
 
 .contacts__link::before {
@@ -868,6 +881,19 @@ input[type=number] {
   border: none;
   border-radius: 3px;
   color: inherit;
+  transition: opacity 0.3s ease;
+}
+
+.content-section form input:not([type=checkbox]):focus-visible,
+.content-section form textarea:focus-visible {
+  opacity: 0.8;
+}
+
+@supports not selector(:focus-visible) {
+  .content-section form input:not([type=checkbox]).focus-visible:focus,
+  .content-section form textarea.focus-visible:focus {
+    opacity: 0.8;
+  }
 }
 
 .content-section form textarea {
@@ -887,8 +913,11 @@ input[type=number] {
   color: #f2f5f6;
   background-color: transparent;
   border-radius: 3px;
-  transition: opacity 0.3s ease;
   cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  transition: opacity 0.3s ease;
   align-self: start;
   margin-right: 10px;
   padding: 15px 20px 11px;
@@ -904,13 +933,11 @@ input[type=number] {
 
 .content-section form button:focus-visible {
   opacity: 0.8;
-  outline: none;
 }
 
 @supports not selector(:focus-visible) {
   .content-section form button.focus-visible:focus {
     opacity: 0.8;
-    outline: none;
   }
 }
 
@@ -925,6 +952,10 @@ input[type=number] {
   color: #ffffff;
   border: 1px solid;
   border-radius: 2px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  cursor: pointer;
 }
 
 .content-section form [type=checkbox]:checked::before {
@@ -948,6 +979,17 @@ input[type=number] {
   font-family: "PT Mono", "Courier New", monospace;
   color: rgba(255, 255, 255, 0.8);
   cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.content-section form label:focus-visible {
+  opacity: 0.8;
+}
+
+@supports not selector(:focus-visible) {
+  .content-section form label.focus-visible:focus {
+    opacity: 0.8;
+  }
 }
 
 .content-section form label [type=checkbox] {
@@ -970,6 +1012,20 @@ input[type=number] {
 .logo {
   position: relative;
   padding: 4px 0 0 70px;
+}
+
+.logo[href] {
+  transition: opacity 0.3s ease;
+}
+
+.logo[href]:focus-visible {
+  opacity: 0.8;
+}
+
+@supports not selector(:focus-visible) {
+  .logo[href].focus-visible:focus {
+    opacity: 0.8;
+  }
 }
 
 .logo__image {
@@ -1053,8 +1109,11 @@ b + .logo__description {
   color: #f2f5f6;
   background-color: transparent;
   border-radius: 3px;
-  transition: opacity 0.3s ease;
   cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  transition: opacity 0.3s ease;
   display: table;
   margin-top: 48px;
   padding: 17px 27px;
@@ -1070,13 +1129,11 @@ b + .logo__description {
 
 .main-header__btn:focus-visible {
   opacity: 0.8;
-  outline: none;
 }
 
 @supports not selector(:focus-visible) {
   .main-header__btn.focus-visible:focus {
     opacity: 0.8;
-    outline: none;
   }
 }
 
@@ -1169,8 +1226,8 @@ b + .logo__description {
 }
 
 .page {
-  display: grid;
-  grid-template-rows: min-content 1fr min-content;
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
 }
 
@@ -1180,6 +1237,10 @@ b + .logo__description {
   right: 0;
   left: 0;
   z-index: 3;
+}
+
+.page__footer {
+  margin-top: auto;
 }
 
 .page-footer {
@@ -1289,6 +1350,17 @@ b + .logo__description {
   height: 30px;
   background-size: contain;
   transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+.socials__link:focus-visible {
+  opacity: 0.8;
+}
+
+@supports not selector(:focus-visible) {
+  .socials__link.focus-visible:focus {
+    opacity: 0.8;
+  }
 }
 
 .socials__link--ok {
@@ -1313,6 +1385,17 @@ b + .logo__description {
 
 .spoiler__toggler {
   display: none;
+  transition: opacity 0.3s ease;
+}
+
+.spoiler__toggler:focus-visible {
+  opacity: 0.8;
+}
+
+@supports not selector(:focus-visible) {
+  .spoiler__toggler.focus-visible:focus {
+    opacity: 0.8;
+  }
 }
 
 .spoiler__list {
@@ -1328,6 +1411,20 @@ b + .logo__description {
   font-family: "PT Mono", "Courier New", monospace;
   -moz-column-break-inside: avoid;
   break-inside: avoid-column;
+}
+
+.spoiler__link {
+  transition: opacity 0.3s ease;
+}
+
+.spoiler__link:focus-visible {
+  opacity: 0.8;
+}
+
+@supports not selector(:focus-visible) {
+  .spoiler__link.focus-visible:focus {
+    opacity: 0.8;
+  }
 }
 
 /* @mixin hover-focus {
@@ -1460,10 +1557,6 @@ b + .logo__description {
 
   .content-section__image {
     margin-right: 24px;
-  }
-
-  .content-section__image img {
-    transform: translateX(-5px);
   }
 
   .content-section__btn {
@@ -1881,10 +1974,15 @@ b + .logo__description {
     right: 0;
     display: block;
     width: 65px;
-    height: 56px;
+    height: 59px;
+    color: inherit;
     background-color: transparent;
     border: none;
+    outline-offset: -2px;
     cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
   }
 
   .spoiler__toggler::before,
@@ -1921,58 +2019,143 @@ b + .logo__description {
     line-height: 19px;
   }
 
-  .spoiler__item:first-child {
-    margin-bottom: 20px;
-  }
-
   .spoiler__item:last-child {
     margin-bottom: 0;
   }
 }
 
 @media (hover: hover) {
-  .btn:hover:not(:focus-visible),
+  .btn:hover,
   .btn:hover:not(.focus-visible) {
     opacity: 0.8;
-    outline: none;
   }
 
-  .content-card:hover:not(:focus-visible),
+  .btn:active,
+  .btn:hover:active,
+  .btn.focus-visible:active {
+    opacity: 0.5;
+  }
+
+  .catalog__link:hover,
+  .catalog__link:hover:not(.focus-visible) {
+    opacity: 0.8;
+  }
+
+  .catalog__link:active,
+  .catalog__link:hover:active,
+  .catalog__link.focus-visible:active {
+    opacity: 0.5;
+  }
+
+  .contacts__link:hover,
+  .contacts__link:hover:not(.focus-visible) {
+    opacity: 0.8;
+  }
+
+  .contacts__link:active,
+  .contacts__link:hover:active,
+  .contacts__link.focus-visible:active {
+    opacity: 0.5;
+  }
+
+  .content-card:hover,
   .content-card:hover:not(.focus-visible) {
     color: #f2f5f6;
     background-color: #00b2ff;
     border-color: #00b2ff;
   }
 
-  .content-card:hover:not(:focus-visible) img,
+  .content-card:hover img,
   .content-card:hover:not(.focus-visible) img {
     filter: grayscale(1) contrast(10);
   }
 
-  .content-card:hover:not(:focus-visible) h3,
+  .content-card:hover h3,
   .content-card:hover:not(.focus-visible) h3 {
     color: #f2f5f6;
   }
 
-  .content-section form button:hover:not(:focus-visible),
+  .content-section form input:not([type=checkbox]):hover,
+  .content-section form input:not([type=checkbox]):hover:not(.focus-visible),
+  .content-section form textarea:hover,
+  .content-section form textarea:hover:not(.focus-visible) {
+    opacity: 0.8;
+  }
+
+  .content-section form button:hover,
   .content-section form button:hover:not(.focus-visible) {
     opacity: 0.8;
-    outline: none;
   }
 
-  .main-header__btn:hover:not(:focus-visible),
+  .content-section form button:active,
+  .content-section form button:hover:active,
+  .content-section form button.focus-visible:active {
+    opacity: 0.5;
+  }
+
+  .content-section form label:hover,
+  .content-section form label:hover:not(.focus-visible) {
+    opacity: 0.8;
+  }
+
+  .content-section form label:active,
+  .content-section form label:hover:active,
+  .content-section form label.focus-visible:active {
+    opacity: 0.5;
+  }
+
+  .logo[href]:hover,
+  .logo[href]:hover:not(.focus-visible) {
+    opacity: 0.8;
+  }
+
+  .logo[href]:active,
+  .logo[href]:hover:active,
+  .logo[href].focus-visible:active {
+    opacity: 0.5;
+  }
+
+  .main-header__btn:hover,
   .main-header__btn:hover:not(.focus-visible) {
     opacity: 0.8;
-    outline: none;
   }
 
-  .socials__link:hover:not(:focus-visible),
+  .main-header__btn:active,
+  .main-header__btn:hover:active,
+  .main-header__btn.focus-visible:active {
+    opacity: 0.5;
+  }
+
+  .socials__link:hover,
   .socials__link:hover:not(.focus-visible) {
     opacity: 0.8;
   }
 
-  .spoiler__link:hover:not(:focus-visible),
+  .socials__link:active,
+  .socials__link:hover:active,
+  .socials__link.focus-visible:active {
+    opacity: 0.5;
+  }
+
+  .spoiler__toggler:hover,
+  .spoiler__toggler:hover:not(.focus-visible) {
+    opacity: 0.8;
+  }
+
+  .spoiler__toggler:active,
+  .spoiler__toggler:hover:active,
+  .spoiler__toggler.focus-visible:active {
+    opacity: 0.5;
+  }
+
+  .spoiler__link:hover,
   .spoiler__link:hover:not(.focus-visible) {
-    text-decoration: underline;
+    opacity: 0.8;
+  }
+
+  .spoiler__link:active,
+  .spoiler__link:hover:active,
+  .spoiler__link.focus-visible:active {
+    opacity: 0.5;
   }
 }
