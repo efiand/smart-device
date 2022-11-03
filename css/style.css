@@ -1559,6 +1559,10 @@ b + .logo__description {
     margin-right: 24px;
   }
 
+  .content-section__body {
+    width: 100%;
+  }
+
   .content-section__btn {
     margin-top: 18px;
   }
@@ -1973,7 +1977,7 @@ b + .logo__description {
     top: 0;
     right: 0;
     display: block;
-    width: 65px;
+    width: 100%;
     height: 59px;
     color: inherit;
     background-color: transparent;
@@ -1989,8 +1993,8 @@ b + .logo__description {
   .spoiler__toggler::after {
     content: "";
     position: absolute;
-    top: 27px;
-    left: 24px;
+    top: 28px;
+    right: 26px;
     width: 15px;
     height: 1px;
     background-color: #ffffff;
@@ -2005,6 +2009,14 @@ b + .logo__description {
   }
 
   .spoiler__toggler[aria-expanded=true] + .spoiler__list {
+    display: block;
+  }
+
+  .spoiler__toggler[data-nojs] {
+    display: none;
+  }
+
+  .spoiler__toggler[data-nojs] + .spoiler__list {
     display: block;
   }
 
