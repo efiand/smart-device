@@ -23,16 +23,21 @@
 .spoiler__toggler {
   display: none;
 
+  @include default-interactive;
+
   @include vp-767 {
     position: absolute;
     top: 0;
     right: 0;
     display: block;
     width: 65px;
-    height: 56px;
+    height: 59px;
+    color: inherit;
     background-color: transparent;
     border: none;
+    outline-offset: -2px;
     cursor: pointer;
+    user-select: none;
 
     &::before,
     &::after {
@@ -84,10 +89,6 @@
     font-size: 14px;
     line-height: 19px;
 
-    &:first-child {
-      margin-bottom: 20px; // Pixelperfect
-    }
-
     &:last-child {
       margin-bottom: 0;
     }
@@ -95,7 +96,5 @@
 }
 
 .spoiler__link {
-  @include hover {
-    text-decoration: underline;
-  }
+  @include default-interactive;
 }

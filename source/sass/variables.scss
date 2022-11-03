@@ -1,15 +1,10 @@
-// Colors
-// ---------------------------------
-
-// Default
-
+// Default colors
 $color-default-black: #000000;
 $color-default-white: #ffffff;
 $color-transparent: rgba($color-default-white, 0);
 
 // Project palette
 // для нейминга цветов используем https://www.htmlcsscolor.com/hex/334482
-
 $color-alice-blue-light: #f2f5f6;
 $color-alice-blue-lighter: #f8fdff;
 $color-black-pearl-dark: #041827;
@@ -20,12 +15,10 @@ $color-silver: #c4c4c4;
 $color-whisper-light: #ebebeb;
 
 // Gradient
-
 $gradient-black-pearl-to-transparent: linear-gradient(
   $color-black-pearl 84.9%,
   $color-transparent
 );
-
 $gradient-black-pearl-light-to-transparent: linear-gradient(
   $color-black-pearl-light 70%,
   $color-transparent
