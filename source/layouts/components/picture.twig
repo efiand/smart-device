@@ -1,5 +1,20 @@
-<picture>
-	{% with image %}
+{% with image %}
+	{% set imgAttributes %}
+		{% if className %}
+			class="{{ className }}"
+		{% endif %}
+
+		alt="{{ alt }}"
+		{% if not alt %}
+			aria-hidden="true"
+		{% endif %}
+
+		{% if not immediately %}
+			loading="lazy"
+		{% endif %}
+	{% endset %}
+
+	<picture>
 		{% if webp %}
 			<source
 				type="image/webp"
@@ -31,20 +46,16 @@
 				srcset="{{ defaultTablet }} 1x{{ defaultTablet2x ? ', ' ~ defaultTablet2x ~ ' 2x' }}"
 			/>
 			<img
-				{{ className ? 'class="' ~ className ~ '"' }}
 				src="{{ defaultMobile }}"
 				{{ defaultMobile2x ? 'srcset="' ~ defaultMobile2x ~ ' 2x"' }}
-				alt="{{ alt }}"
-				{{ alt ?: 'aria-hidden="true"' }}
+				{{ imgAttributes }}
 			/>
 		{% else %}
 			<img
-				{{ className ? 'class="' ~ className ~ '"' }}
 				src="{{ default }}"
 				{{ default2x ? 'srcset="' ~ default2x ~ ' 2x"' }}
-				alt="{{ alt }}"
-				{{ alt ?: 'aria-hidden="true"' }}
+				{{ imgAttributes }}
 			/>
 		{% endif %}
-	{% endwith %}
-</picture>
+	</picture>
+{% endwith %}

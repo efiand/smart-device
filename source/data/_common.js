@@ -38,6 +38,8 @@ export default {
       value: mainPhone.shortPhone,
     },
   ],
+  description:
+    'Печатные платы: производство и монтаж, поставка комплектующих, блоков и модулей',
   projectName: 'Smart Device',
   sitemapLinks: {
     heading: 'Разделы сайта',

@@ -70,6 +70,7 @@ export default {
           id="feedback-name"
           name="name"
           type="text"
+          value="Имя"
           placeholder="Имя"
           required
         />
@@ -79,16 +80,17 @@ export default {
           id="feedback-phone"
           name="phone"
           type="tel"
+          value="Телефон"
           placeholder="Телефон"
           required
         />
         <label class="visually-hidden" for="feedback-phone">Телефон</label>
 
         <textarea
-          name="message"
           id="feedback-message"
+          name="message"
           placeholder="Ваш вопрос"
-        ></textarea>
+        >Ваш вопрос</textarea>
         <label class="visually-hidden" for="feedback-message">
           Ваш вопрос
         </label>
