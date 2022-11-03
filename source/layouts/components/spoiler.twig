@@ -1,7 +1,13 @@
 <div class="spoiler {{ bemMix }}">
 	<h2 class="spoiler__heading">{{ heading }}</h2>
 
-	<button class="spoiler__toggler" type="button" aria-controls="spoiler-{{ id }}" aria-expanded="false">
+	<button
+		class="spoiler__toggler"
+		type="button"
+		aria-controls="spoiler-{{ id }}"
+		aria-expanded="{{ expanded ? 'true' : false }}"
+		data-nojs
+	>
 		<span class="visually-hidden">{{ spoilerTogglerText }}</span>
 	</button>
 

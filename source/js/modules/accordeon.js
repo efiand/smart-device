@@ -1,6 +1,10 @@
 export default (accordeonElement) => {
   const togglerElements = accordeonElement.querySelectorAll('[aria-expanded]');
 
+  togglerElements.forEach((togglerElement) => {
+    togglerElement.removeAttribute('data-nojs');
+  });
+
   accordeonElement.addEventListener('click', (evt) => {
     const expandedValue = evt.target.getAttribute('aria-expanded');
 

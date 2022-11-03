@@ -97,6 +97,10 @@
 }
 
 .content-section__body {
+  @include vp-1023 {
+    width: 100%;
+  }
+
   h2 {
     margin: 0 0 13px;
     font-weight: 400;

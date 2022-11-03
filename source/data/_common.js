@@ -10,6 +10,7 @@ const [mainPhone, ...additionalPhones] = [
 
 export default {
   addressLinks: {
+    expanded: true,
     heading: 'Наш офис',
     id: 'contacts',
     list: [
