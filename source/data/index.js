@@ -72,6 +72,7 @@ export default {
           type="text"
           value="Имя"
           placeholder="Имя"
+          pattern="^[A-Za-zА-Яа-яЁё\\- ]+$"
           required
         />
         <label class="visually-hidden" for="feedback-name">Имя</label>
@@ -82,6 +83,7 @@ export default {
           type="tel"
           value="Телефон"
           placeholder="Телефон"
+          pattern="^\\+[\\d\\-() ]{10,17}$"
           required
         />
         <label class="visually-hidden" for="feedback-phone">Телефон</label>
