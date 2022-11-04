@@ -1231,6 +1231,11 @@ b + .logo__description {
   min-height: 100vh;
 }
 
+.page--form {
+  color: #ffffff;
+  background-color: #00b2ff;
+}
+
 .page__header {
   position: fixed;
   top: 0;
@@ -1612,6 +1617,10 @@ b + .logo__description {
     margin: 56px 0 0 44px;
   }
 
+  .page--form .page__main {
+    padding-top: 100px;
+  }
+
   .page-footer {
     padding-bottom: 60px;
   }
@@ -1892,6 +1901,10 @@ b + .logo__description {
 
   .modal--fit-content .modal__content {
     width: 100%;
+  }
+
+  .page--form .page__main {
+    padding-top: 50px;
   }
 
   .page-footer {
