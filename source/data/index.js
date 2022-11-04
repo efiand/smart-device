@@ -1,5 +1,43 @@
 import html from '../js/utils/html.js';
 
+export const getFormContent = (id, buttonText = 'Отправить') => html`<form
+  action="https://echo.htmlacademy.ru"
+>
+  <input
+    id="${id}-name"
+    name="name"
+    type="text"
+    value="Имя"
+    placeholder="Имя"
+    pattern="^[A-Za-zА-Яа-яЁё\\- ]+$"
+    required
+  />
+  <label class="visually-hidden" for="${id}-name">Имя</label>
+
+  <input
+    id="${id}-phone"
+    name="phone"
+    type="tel"
+    value="Телефон"
+    placeholder="Телефон"
+    pattern="^\\+[\\d\\-() ]{10,17}$"
+    required
+  />
+  <label class="visually-hidden" for="${id}-phone">Телефон</label>
+
+  <textarea id="${id}-message" name="message" placeholder="Ваш вопрос">
+    Ваш вопрос
+  </textarea>
+  <label class="visually-hidden" for="${id}-message">Ваш вопрос</label>
+
+  <button type="submit">${buttonText}</button>
+
+  <label>
+    <input name="agree" type="checkbox" checked required />
+    Я согласен на обработку персональных данных
+  </label>
+</form>`;
+
 export default {
   about: {
     content: html`<h2>О компании</h2>
@@ -62,48 +100,17 @@ export default {
       </p>`,
   ],
   advantagesHeading: 'Преимущества.',
+  callback: {
+    content: html`<h2>Закажите звонок</h2>
+      <p>
+        Оставьте контакты, мы проконсультируем вас бесплатно в удобное время
+      </p>
+      ${getFormContent('callback')}`,
+  },
   feedback: {
     content: html`<h2>Остались вопросы? Задайте их нам!</h2>
       <p>Мы проконсультируем Вас бесплатно</p>
-      <form action="https://echo.htmlacademy.ru">
-        <input
-          id="feedback-name"
-          name="name"
-          type="text"
-          value="Имя"
-          placeholder="Имя"
-          pattern="^[A-Za-zА-Яа-яЁё\\- ]+$"
-          required
-        />
-        <label class="visually-hidden" for="feedback-name">Имя</label>
-
-        <input
-          id="feedback-phone"
-          name="phone"
-          type="tel"
-          value="Телефон"
-          placeholder="Телефон"
-          pattern="^\\+[\\d\\-() ]{10,17}$"
-          required
-        />
-        <label class="visually-hidden" for="feedback-phone">Телефон</label>
-
-        <textarea
-          id="feedback-message"
-          name="message"
-          placeholder="Ваш вопрос"
-        >Ваш вопрос</textarea>
-        <label class="visually-hidden" for="feedback-message">
-          Ваш вопрос
-        </label>
-
-        <button type="submit">Задать вопрос</button>
-
-        <label>
-          <input name="agree" type="checkbox" checked required />
-          Я согласен на обработку персональных данных
-        </label>
-      </form>`,
+      ${getFormContent('feedback', 'Задать вопрос')}`,
     id: 'feedback',
     image: {
       default: 'img/plane.png',
@@ -194,21 +201,4 @@ export default {
     ],
     mobileHeading: 'Товары и услуги Smart Device',
   },
-  socials: [
-    {
-      id: 'ok',
-      title: 'Мы в Одноклассниках.',
-      url: '#!',
-    },
-    {
-      id: 'vk',
-      title: 'Мы в Контакте.',
-      url: '#!',
-    },
-    {
-      id: 'pinterest',
-      title: 'Мы в Pinterest',
-      url: '#!',
-    },
-  ],
 };
