@@ -7,6 +7,7 @@ const typograf = new Typograf({
   locale: ['ru', 'en-US'],
   htmlEntity: {type: 'name'},
 });
+typograf.disableRule('ru/other/phone-number');
 
 module.exports = {
   plugins: [

@@ -1,7 +1,7 @@
-import gulp from 'gulp';
+import beautify from 'gulp-html-beautify';
 import createHtml from 'gulp-twig';
 import getData from 'gulp-data';
-import prettier from 'gulp-prettier';
+import gulp from 'gulp';
 import processHtml from 'gulp-posthtml';
 import useCondition from 'gulp-if';
 import validateBem from 'gulp-html-bemlinter';
@@ -56,7 +56,7 @@ const compileLayouts = () =>
     )
     .pipe(processHtml())
     .pipe(validateBem())
-    .pipe(useCondition(!lintMode, prettier()))
+    .pipe(useCondition(!lintMode, beautify()))
     .pipe(useCondition(!lintMode, gulp.dest('build')));
 
 export default compileLayouts;
