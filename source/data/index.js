@@ -7,7 +7,6 @@ export const getFormContent = (id, buttonText = 'Отправить') => html`<f
     id="${id}-name"
     name="name"
     type="text"
-    value="Имя"
     placeholder="Имя"
     pattern="^[A-Za-zА-Яа-яЁё\\- ]+$"
     required
@@ -18,16 +17,17 @@ export const getFormContent = (id, buttonText = 'Отправить') => html`<f
     id="${id}-phone"
     name="phone"
     type="tel"
-    value="Телефон"
     placeholder="Телефон"
     pattern="^\\+[\\d\\-() ]{10,17}$"
     required
   />
   <label class="visually-hidden" for="${id}-phone">Телефон</label>
 
-  <textarea id="${id}-message" name="message" placeholder="Ваш вопрос">
-    Ваш вопрос
-  </textarea>
+  <textarea
+    id="${id}-message"
+    name="message"
+    placeholder="Ваш вопрос"
+  ></textarea>
   <label class="visually-hidden" for="${id}-message">Ваш вопрос</label>
 
   <button type="submit">${buttonText}</button>
@@ -106,6 +106,7 @@ export default {
         Оставьте контакты, мы проконсультируем вас бесплатно в удобное время
       </p>
       ${getFormContent('callback')}`,
+    modalId: 'callback',
   },
   feedback: {
     content: html`<h2>Остались вопросы? Задайте их нам!</h2>

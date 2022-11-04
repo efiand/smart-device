@@ -1,0 +1,9 @@
+{% extends '../common/layout.twig' %}
+
+{% block main %}
+	{% include '../components/main-header.twig' with promo|merge({ bemMix: 'page-main__header' }) %}
+{% endblock %}
+
+{% block modal %}
+	{% include '../components/modal.twig' with { component: 'content-section', data: callback, dev: true } %}
+{% endblock %}

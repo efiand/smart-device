@@ -1,7 +1,7 @@
 {% set hasForm = contains(content, '<form') %}
 
 <section
-	class="content-section {{ hasForm ? 'content-section--form' }} {{ bemMix }}"
+	class="content-section {{ hasForm ? 'content-section--form' }} {{ bemModifier ? 'content-section--' ~ bemModifier }} {{ bemMix }}"
 	{{ id ? 'id="' ~ id ~ '"' }}
 	data-content-section
 >

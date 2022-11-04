@@ -64,8 +64,12 @@ export class Modals {
       typeof this._settings[settingKey].eventTimeout === 'number'
         ? this._settings[settingKey].eventTimeout
         : this._settings[this._settingKey].eventTimeout;
-    this._openCallback = this._settings[settingKey].openCallback || this._settings[this._settingKey].openCallback;
-    this._closeCallback = this._settings[settingKey].closeCallback || this._settings[this._settingKey].closeCallback;
+    this._openCallback =
+      this._settings[settingKey].openCallback ||
+      this._settings[this._settingKey].openCallback;
+    this._closeCallback =
+      this._settings[settingKey].closeCallback ||
+      this._settings[this._settingKey].closeCallback;
   }
 
   _documentClickHandler(evt) {
@@ -98,7 +102,7 @@ export class Modals {
   _modalClickHandler(evt) {
     const target = evt.target;
 
-    if (!target.closest('[data-close-modal]')) {
+    if (!target.closest('[data-close-modal]') && !target.dataset.modal) {
       return;
     }
 

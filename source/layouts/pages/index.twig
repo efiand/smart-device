@@ -21,3 +21,7 @@
 
 	{% include '../components/content-section.twig' with feedback %}
 {% endblock %}
+
+{% block modal %}
+	{% include '../components/modal.twig' with { component: 'content-section', data: callback } %}
+{% endblock %}
