@@ -18,7 +18,7 @@ export const getFormContent = (id, buttonText = 'Отправить') => html`<f
     name="phone"
     type="tel"
     placeholder="Телефон"
-    pattern="^\\+[\\d\\-() ]{10,17}$"
+    pattern="^\\+7\\(\\d{3}\\)\\d{7}$"
     required
   />
   <label class="visually-hidden" for="${id}-phone">Телефон</label>
