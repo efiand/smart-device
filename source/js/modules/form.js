@@ -4,6 +4,11 @@ export default (formElement, id = 0) => {
 
   fieldElements.forEach((fieldElement) => {
     const {name, type} = fieldElement;
+
+    if (type === 'password') {
+      return;
+    }
+
     const fieldId = `form-${id}-${name}`;
 
     try {
