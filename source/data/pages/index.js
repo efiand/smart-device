@@ -1,42 +1,5 @@
-import html from '../js/utils/html.js';
-
-export const getFormContent = (id, buttonText = 'Отправить') => html`<form
-  action="https://echo.htmlacademy.ru"
->
-  <input
-    id="${id}-name"
-    name="name"
-    type="text"
-    placeholder="Имя"
-    pattern="^[A-Za-zА-Яа-яЁё\\- ]+$"
-    required
-  />
-  <label class="visually-hidden" for="${id}-name">Имя</label>
-
-  <input
-    id="${id}-phone"
-    name="phone"
-    type="tel"
-    placeholder="Телефон"
-    pattern="^\\+7\\(\\d{3}\\)\\d{7}$"
-    required
-  />
-  <label class="visually-hidden" for="${id}-phone">Телефон</label>
-
-  <textarea
-    id="${id}-message"
-    name="message"
-    placeholder="Ваш вопрос"
-  ></textarea>
-  <label class="visually-hidden" for="${id}-message">Ваш вопрос</label>
-
-  <button type="submit">${buttonText}</button>
-
-  <label>
-    <input name="agree" type="checkbox" checked required />
-    Я согласен на обработку персональных данных
-  </label>
-</form>`;
+import html from '../../js/utils/html.js';
+import getFormData from '../modules/form.js';
 
 export default {
   about: {
@@ -104,14 +67,14 @@ export default {
     content: html`<h2>Закажите звонок</h2>
       <p>
         Оставьте контакты, мы проконсультируем вас бесплатно в удобное время
-      </p>
-      ${getFormContent('callback')}`,
+      </p>`,
+    form: getFormData('callback'),
     modalId: 'callback',
   },
   feedback: {
     content: html`<h2>Остались вопросы? Задайте их нам!</h2>
-      <p>Мы проконсультируем Вас бесплатно</p>
-      ${getFormContent('feedback', 'Задать вопрос')}`,
+      <p>Мы проконсультируем Вас бесплатно</p>`,
+    form: getFormData('feedback', 'Задать вопрос'),
     id: 'feedback',
     image: {
       default: 'img/plane.png',

@@ -27,15 +27,15 @@ const compileLayouts = () =>
         let pageData = {};
 
         try {
-          commonData = await import(`../source/data/_common.js?${versionId}`);
+          commonData = await import(`../source/data/global.js?${versionId}`);
         } catch (error) {
-          // Continue regardless of error
+          console.error(error);
         }
 
         try {
-          pageData = await import(`../source/data/${page}.js?${versionId}`);
+          pageData = await import(`../source/data/pages/${page}.js?${versionId}`);
         } catch (error) {
-          // Continue regardless of error
+          console.error(error);
         }
 
         return {

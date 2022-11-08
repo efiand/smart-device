@@ -1,0 +1,12 @@
+<form class="form {{ bemMix }}" action="{{ action }}" method="{{ method ?? 'get'}}" data-form>
+	{% for field in fields %}
+		{% set wideModifier = contains(field, 'textarea') ? 'form__group--wide' %}
+		{% set lastModifier = contains(field, 'agree') ? 'form__group--last' %}
+
+		<p class="form__group {{ wideModifier }} {{ lastModifier }}">
+			{{ field }}
+		</p>
+	{% endfor %}
+
+	<button class="form__btn" type="submit">{{ submitText }}</button>
+</form>

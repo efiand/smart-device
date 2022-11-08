@@ -1,7 +1,5 @@
-{% set hasForm = contains(content, '<form') %}
-
 <section
-	class="content-section {{ hasForm ? 'content-section--form' }} {{ bemModifier ? 'content-section--' ~ bemModifier }} {{ bemMix }}"
+	class="content-section {{ form ? 'content-section--form' }} {{ bemModifier ? 'content-section--' ~ bemModifier }} {{ bemMix }}"
 	{{ id ? 'id="' ~ id ~ '"' }}
 	data-content-section
 >
@@ -14,6 +12,10 @@
 
 		<div class="content-section__body">
 			{{ content }}
+
+			{% if form %}
+				{% include 'form.twig' with form|merge({ bemMix: 'content-section__form' }) %}
+			{% endif %}
 		</div>
 	</div>
 </section>

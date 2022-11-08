@@ -1,13 +1,13 @@
-import html from '../js/utils/html.js';
-import {getFormContent} from './index.js';
+import html from '../../js/utils/html.js';
+import getFormData from '../modules/form.js';
 
 export default {
   callback: {
     content: html`<h2>Закажите звонок</h2>
       <p>
         Оставьте контакты, мы проконсультируем вас бесплатно в удобное время
-      </p>
-      ${getFormContent('callback')}`,
+      </p>`,
+    form: getFormData('callback'),
     modalId: 'callback',
   },
   promo: {

@@ -14,13 +14,13 @@
 		<link href="fonts/roboto-condensed-400.woff2" rel="preload" as="font" crossorigin="anonymous">
 		<link href="fonts/pt-mono.woff2" rel="preload" as="font" crossorigin="anonymous">
 
-		{% include 'favicons.twig' %}
+		{% include 'modules/favicons.twig' %}
 	</head>
 
 	<body>
 		<div class="page {{ pageModifier }}">
 			{% block header %}
-				{% include '../components/page-header.twig' with { bemMix: 'page__header' } %}
+				{% include 'components/page-header.twig' with { bemMix: 'page__header' } %}
 			{% endblock %}
 
 			<main class="page__main page-main">
@@ -28,11 +28,11 @@
 			</main>
 
 			{% block footer %}
-				{% include '../components/page-footer.twig' with { bemMix: 'page__footer' } %}
+				{% include 'components/page-footer.twig' with { bemMix: 'page__footer' } %}
 			{% endblock %}
 
 			{% block modal %}{% endblock %}
-			{% include 'scripts.twig' %}
+			{% include 'modules/scripts.twig' %}
 		</div>
 	</body>
 </html>
