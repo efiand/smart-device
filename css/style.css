@@ -814,146 +814,6 @@ input[type=number] {
   margin-top: 6px;
 }
 
-.content-section form {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px 30px;
-  margin: 35px 10px 0 5px;
-}
-
-.content-section form p {
-  margin: 0;
-}
-
-.content-section form p:has(textarea) {
-  grid-column: span 2;
-}
-
-.content-section input:not([type=checkbox]),
-.content-section textarea {
-  width: 100%;
-  padding: 15px 15px 17px 15px;
-  font-family: "PT Mono", "Courier New", monospace;
-  background-color: rgba(4, 24, 39, 0.15);
-  border: none;
-  border-radius: 3px;
-  color: inherit;
-  transition: opacity 0.3s ease;
-}
-
-.content-section input:not([type=checkbox]):focus-visible,
-.content-section textarea:focus-visible {
-  opacity: 0.8;
-}
-
-@supports not selector(:focus-visible) {
-  .content-section input:not([type=checkbox]).focus-visible:focus,
-  .content-section textarea.focus-visible:focus {
-    opacity: 0.8;
-  }
-}
-
-.content-section textarea {
-  grid-column: 1/-1;
-  padding-top: 24px;
-  padding-bottom: 24px;
-  min-height: 155px;
-  margin-bottom: 15px;
-}
-
-.content-section button {
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  font-family: "Roboto Condensed", "Arial", sans-serif;
-  text-transform: uppercase;
-  text-align: center;
-  color: #f2f5f6;
-  background-color: transparent;
-  border-radius: 3px;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
-  transition: opacity 0.3s ease;
-  align-self: start;
-  margin-right: 10px;
-  padding: 15px 20px 11px;
-  line-height: 19px;
-  background-color: #041827;
-  border: none;
-}
-
-.content-section button:disabled {
-  opacity: 0.5;
-  pointer-events: none;
-}
-
-.content-section button:focus-visible {
-  opacity: 0.8;
-}
-
-@supports not selector(:focus-visible) {
-  .content-section button.focus-visible:focus {
-    opacity: 0.8;
-  }
-}
-
-.content-section [type=checkbox] {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  position: relative;
-  flex-shrink: 0;
-  width: 15px;
-  height: 15px;
-  color: #ffffff;
-  border: 1px solid;
-  border-radius: 2px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
-  cursor: pointer;
-}
-
-.content-section [type=checkbox]:checked::before {
-  content: "";
-  position: absolute;
-  top: 4px;
-  left: 3px;
-  width: 6px;
-  height: 3px;
-  border-bottom: 1px solid;
-  border-left: 1px solid;
-  transform: rotate(-45deg);
-}
-
-.content-section label {
-  display: flex;
-  align-items: center;
-  padding: 14px 10px;
-  font-size: 14px;
-  line-height: 16px;
-  font-family: "PT Mono", "Courier New", monospace;
-  color: rgba(255, 255, 255, 0.8);
-  cursor: pointer;
-  transition: opacity 0.3s ease;
-}
-
-.content-section label:focus-visible {
-  opacity: 0.8;
-}
-
-@supports not selector(:focus-visible) {
-  .content-section label.focus-visible:focus {
-    opacity: 0.8;
-  }
-}
-
-.content-section label [type=checkbox] {
-  margin-top: -1px;
-  margin-right: 10px;
-}
-
 .content-section__inner {
   position: relative;
   display: flex;
@@ -976,13 +836,13 @@ input[type=number] {
   line-height: 50px;
 }
 
-.content-section__body p {
+.content-section__body > p {
   margin: 0;
   line-height: 21.5px;
   font-family: "PT Mono", "Courier New", monospace;
 }
 
-.content-section__body p + p {
+.content-section__body > p + p {
   margin-top: 22px;
 }
 
@@ -995,6 +855,10 @@ input[type=number] {
   min-height: 45px;
   margin-top: 40px;
   color: #00b2ff;
+}
+
+.content-section__form {
+  margin: 35px 10px 0 5px;
 }
 
 .content-section--modal {
@@ -1013,7 +877,7 @@ input[type=number] {
   padding: 0;
 }
 
-.content-section--modal .content-section__body p {
+.content-section--modal .content-section__body > p {
   margin: 0 30px 0 0;
 }
 
@@ -1023,21 +887,166 @@ input[type=number] {
   line-height: 42px;
 }
 
-.content-section--modal form {
-  grid-template-columns: 1fr;
+.content-section--modal .content-section__form {
   margin: 38px 0 0;
 }
 
-.content-section--modal textarea {
+.form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px 30px;
+}
+
+.form input:not([type=checkbox]),
+.form textarea {
+  width: 100%;
+  padding: 15px 15px 17px 15px;
+  font-family: "PT Mono", "Courier New", monospace;
+  background-color: rgba(4, 24, 39, 0.15);
+  border: none;
+  border-radius: 3px;
+  color: inherit;
+  transition: opacity 0.3s ease;
+}
+
+.form input:not([type=checkbox]):focus-visible,
+.form textarea:focus-visible {
+  opacity: 0.8;
+}
+
+@supports not selector(:focus-visible) {
+  .form input:not([type=checkbox]).focus-visible:focus,
+  .form textarea.focus-visible:focus {
+    opacity: 0.8;
+  }
+}
+
+.form textarea {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  min-height: 155px;
+  margin-bottom: 15px;
+}
+
+.form [type=checkbox] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: relative;
+  flex-shrink: 0;
+  width: 15px;
+  height: 15px;
+  color: #ffffff;
+  border: 1px solid;
+  border-radius: 2px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  cursor: pointer;
+}
+
+.form [type=checkbox]:checked::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 3px;
+  width: 6px;
+  height: 3px;
+  border-bottom: 1px solid;
+  border-left: 1px solid;
+  transform: rotate(-45deg);
+}
+
+.form label {
+  display: flex;
+  align-items: center;
+  padding: 14px 10px;
+  font-size: 14px;
+  line-height: 16px;
+  font-family: "PT Mono", "Courier New", monospace;
+  color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.form label:focus-visible {
+  opacity: 0.8;
+}
+
+@supports not selector(:focus-visible) {
+  .form label.focus-visible:focus {
+    opacity: 0.8;
+  }
+}
+
+.form label [type=checkbox] {
+  margin-top: -1px;
+  margin-right: 10px;
+}
+
+.form__group {
+  margin: 0;
+}
+
+.form__group--wide {
+  grid-column: 1/-1;
+}
+
+.form__group--last {
+  order: 100500;
+}
+
+.form__btn {
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  color: #f2f5f6;
+  background-color: transparent;
+  border-radius: 3px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  transition: opacity 0.3s ease;
+  align-self: start;
+  margin-right: 10px;
+  padding: 15px 20px 11px;
+  line-height: 19px;
+  background-color: #041827;
+  border: none;
+}
+
+.form__btn:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.form__btn:focus-visible {
+  opacity: 0.8;
+}
+
+@supports not selector(:focus-visible) {
+  .form__btn.focus-visible:focus {
+    opacity: 0.8;
+  }
+}
+
+[data-modal] .form {
+  grid-template-columns: 1fr;
+}
+
+[data-modal] .form textarea {
   margin-bottom: 5px;
 }
 
-.content-section--modal button {
-  margin-right: 0;
+[data-modal] .form label {
+  padding: 0 10px 4px;
 }
 
-.content-section--modal label {
-  padding: 0 10px 4px;
+[data-modal] .form .form__btn {
+  margin-right: 0;
 }
 
 .grid {
@@ -1604,27 +1613,6 @@ b + .logo__description {
     margin-top: -4px;
   }
 
-  .content-section form {
-    margin: 25px 0 0;
-  }
-
-  .content-section textarea {
-    padding-top: 32px;
-    padding-bottom: 32px;
-  }
-
-  .content-section button {
-    margin-right: 54px;
-  }
-
-  .content-section label {
-    padding: 10px 0;
-  }
-
-  .content-section label [type=checkbox] {
-    margin-top: -2px;
-  }
-
   .content-section__image {
     margin-right: 24px;
   }
@@ -1637,11 +1625,32 @@ b + .logo__description {
     margin-top: 18px;
   }
 
+  .content-section__form {
+    margin: 25px 0 0;
+  }
+
   .content-section--modal {
     padding: 0;
   }
 
-  .content-section--modal button {
+  .form textarea {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  .form label {
+    padding: 10px 0;
+  }
+
+  .form label [type=checkbox] {
+    margin-top: -2px;
+  }
+
+  .form__btn {
+    margin-right: 54px;
+  }
+
+  [data-modal] .form .form__btn {
     margin-right: 0;
   }
 
@@ -1838,26 +1847,6 @@ b + .logo__description {
     font-size: 30px;
   }
 
-  .content-section form {
-    grid-template-columns: 1fr;
-    margin-top: 34px;
-  }
-
-  .content-section textarea {
-    min-height: 180px;
-    margin-bottom: 10px;
-    padding-top: 25px;
-    padding-bottom: 25px;
-  }
-
-  .content-section button {
-    margin-right: 0;
-  }
-
-  .content-section label {
-    padding: 5px;
-  }
-
   .content-section__image {
     display: none;
   }
@@ -1868,12 +1857,12 @@ b + .logo__description {
     line-height: 42px;
   }
 
-  .content-section__body p {
+  .content-section__body > p {
     font-size: 14px;
     line-height: 19px;
   }
 
-  .content-section__body p + p {
+  .content-section__body > p + p {
     margin-top: 18px;
   }
 
@@ -1887,8 +1876,31 @@ b + .logo__description {
     margin-top: 14px;
   }
 
+  .content-section__form {
+    margin-top: 34px;
+  }
+
   .content-section--modal {
     padding: 0;
+  }
+
+  .form {
+    grid-template-columns: 1fr;
+  }
+
+  .form textarea {
+    min-height: 180px;
+    margin-bottom: 10px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  .form label {
+    padding: 5px;
+  }
+
+  .form__btn {
+    margin-right: 0;
   }
 
   .grid {
@@ -2151,32 +2163,32 @@ b + .logo__description {
     color: #f2f5f6;
   }
 
-  .content-section input:not([type=checkbox]):hover,
-  .content-section input:not([type=checkbox]):hover:not(.focus-visible),
-  .content-section textarea:hover,
-  .content-section textarea:hover:not(.focus-visible) {
+  .form input:not([type=checkbox]):hover,
+  .form input:not([type=checkbox]):hover:not(.focus-visible),
+  .form textarea:hover,
+  .form textarea:hover:not(.focus-visible) {
     opacity: 0.8;
   }
 
-  .content-section button:hover,
-  .content-section button:hover:not(.focus-visible) {
+  .form label:hover,
+  .form label:hover:not(.focus-visible) {
     opacity: 0.8;
   }
 
-  .content-section button:active,
-  .content-section button:hover:active,
-  .content-section button.focus-visible:active {
+  .form label:active,
+  .form label:hover:active,
+  .form label.focus-visible:active {
     opacity: 0.5;
   }
 
-  .content-section label:hover,
-  .content-section label:hover:not(.focus-visible) {
+  .form__btn:hover,
+  .form__btn:hover:not(.focus-visible) {
     opacity: 0.8;
   }
 
-  .content-section label:active,
-  .content-section label:hover:active,
-  .content-section label.focus-visible:active {
+  .form__btn:active,
+  .form__btn:hover:active,
+  .form__btn.focus-visible:active {
     opacity: 0.5;
   }
 
