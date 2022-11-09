@@ -693,12 +693,13 @@ input[type=number] {
 }
 
 .contacts__item {
-  margin: 5px 20px;
+  margin: 0 15px;
 }
 
 .contacts__link {
   display: flex;
   align-items: center;
+  padding: 5px;
   font-family: "PT Mono", "Courier New", monospace;
   transition: opacity 0.3s ease;
 }
