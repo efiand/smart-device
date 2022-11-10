@@ -25,7 +25,7 @@ export default {
   },
   callbackLink: {
     title: 'Заказать звонок',
-    url: 'callback.html',
+    url: 'backcall.html',
   },
   contacts: [
     {
