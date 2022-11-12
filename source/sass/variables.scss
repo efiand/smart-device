@@ -20,7 +20,7 @@ $gradient-black-pearl-to-transparent: linear-gradient(
   $color-transparent
 );
 $gradient-black-pearl-light-to-transparent: linear-gradient(
-  $color-black-pearl-light 70%,
+  rgba($color-black-pearl-light, 70%) 71.72%,
   $color-transparent
 );
 
