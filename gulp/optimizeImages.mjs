@@ -3,6 +3,11 @@ import imagemin from 'gulp-imagemin';
 import webp from 'gulp-webp';
 import {stacksvg} from 'gulp-stacksvg';
 
+const optimizeRasters = imagemin([
+  imagemin.optipng({optimizationLevel: 3}),
+  imagemin.mozjpeg({quality: 75, progressive: true}),
+]);
+
 const svgo = () =>
   gulp
     .src('source/img/**/*.{svg}')
@@ -40,19 +45,15 @@ const createWebp = () => {
   const root = '';
   return gulp
     .src(`source/img/${root}**/*.{png,jpg}`)
-    .pipe(webp({quality: 80}))
+    .pipe(optimizeRasters)
+    .pipe(webp({quality: 75}))
     .pipe(gulp.dest(`source/img/${root}`));
 };
 
 const optimizeImages = () =>
   gulp
     .src('build/**/*.{png,jpg}', {base: 'build'})
-    .pipe(
-      imagemin([
-        imagemin.optipng({optimizationLevel: 3}),
-        imagemin.mozjpeg({quality: 75, progressive: true}),
-      ])
-    )
+    .pipe(optimizeRasters)
     .pipe(gulp.dest('build'));
 
 export {svgo, sprite, createWebp, optimizeImages};
