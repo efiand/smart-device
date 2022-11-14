@@ -6,7 +6,7 @@
   left: 0;
   z-index: 1000;
   display: flex;
-  overflow-y: auto;
+  overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
   background-color: rgba($color-black-pearl-dark, 0.7);
   transform: scale(1.2);
