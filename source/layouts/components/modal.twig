@@ -1,4 +1,4 @@
-<div class="modal {{ dev ? 'modal--dev is-active' }}" data-modal="{{ data.modalId }}">
+<div class="modal {{ dev ? 'modal--dev is-active' }}" data-modal="{{ data.modalId }}" hidden>
 	<div class="modal__content">
 		{% include component ~ '.twig' with data|merge({ bemModifier: 'modal' }) %}
 
