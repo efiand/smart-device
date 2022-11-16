@@ -508,17 +508,16 @@ input::-webkit-search-results-decoration {
   appearance: none;
 }
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  margin: 0;
-  -webkit-appearance: none;
-  appearance: none;
-}
-
 input[type=number] {
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
   appearance: textfield;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 .rouble {
@@ -1219,6 +1218,33 @@ b + .logo__description {
   pointer-events: none;
 }
 
+.modal--responsive .modal__content {
+  width: 100%;
+}
+
+.modal--fit-content .modal__content {
+  width: auto;
+}
+
+.modal--no-scale {
+  transform: none;
+}
+
+.modal--preload {
+  transition: none;
+}
+
+.modal--dev {
+  position: absolute;
+}
+
+.modal.is-active {
+  transform: scale(1);
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+
 .modal__content {
   position: relative;
   max-width: 500px;
@@ -1254,33 +1280,6 @@ b + .logo__description {
   .modal__close-btn.focus-visible:focus {
     opacity: 0.8;
   }
-}
-
-.modal--responsive .modal__content {
-  width: 100%;
-}
-
-.modal--fit-content .modal__content {
-  width: auto;
-}
-
-.modal--no-scale {
-  transform: none;
-}
-
-.modal--preload {
-  transition: none;
-}
-
-.modal--dev {
-  position: absolute;
-}
-
-.modal.is-active {
-  transform: scale(1);
-  visibility: visible;
-  opacity: 1;
-  pointer-events: auto;
 }
 
 .page {
@@ -1459,6 +1458,22 @@ b + .logo__description {
   .spoiler__toggler.focus-visible:focus {
     opacity: 0.8;
   }
+}
+
+.spoiler__toggler[aria-expanded=true]::after {
+  display: none;
+}
+
+.spoiler__toggler[aria-expanded=true] + .spoiler__list {
+  display: block;
+}
+
+.spoiler__toggler[data-nojs] {
+  display: none;
+}
+
+.spoiler__toggler[data-nojs] + .spoiler__list {
+  display: block;
 }
 
 .spoiler__list {
@@ -1970,12 +1985,12 @@ b + .logo__description {
     line-height: 17px;
   }
 
-  .modal__content {
-    padding: 20px;
-  }
-
   .modal--fit-content .modal__content {
     width: 100%;
+  }
+
+  .modal__content {
+    padding: 20px;
   }
 
   .page--form .page__main {
@@ -2090,22 +2105,6 @@ b + .logo__description {
 
   .spoiler__toggler::after {
     transform: rotate(90deg);
-  }
-
-  .spoiler__toggler[aria-expanded=true]::after {
-    display: none;
-  }
-
-  .spoiler__toggler[aria-expanded=true] + .spoiler__list {
-    display: block;
-  }
-
-  .spoiler__toggler[data-nojs] {
-    display: none;
-  }
-
-  .spoiler__toggler[data-nojs] + .spoiler__list {
-    display: block;
   }
 
   .spoiler__list {
