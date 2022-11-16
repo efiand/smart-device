@@ -156,7 +156,10 @@ function applyFocusVisiblePolyfill(scope) {
       return;
     }
 
-    if (e.target.classList.contains('focus-visible') || e.target.hasAttribute('data-focus-visible-added')) {
+    if (
+      e.target.classList.contains('focus-visible') ||
+      e.target.hasAttribute('data-focus-visible-added')
+    ) {
       // To detect a tab/window switch, we look for a blur event followed
       // rapidly by a visibility change.
       // If we don't see a visibility change within 100ms, it's probably a

@@ -93,6 +93,10 @@
       padding: 5px;
     }
   }
+
+  label[for] {
+    @include visually-hidden;
+  }
 }
 
 .form__group {

@@ -11,7 +11,7 @@ export default (id, submitText = 'Отправить') => ({
         pattern="^[A-Za-zА-Яа-яЁё\\- ]+$"
         required
       />
-      <label class="visually-hidden" for="${id}-name">Имя</label>`,
+      <label for="${id}-name">Имя</label>`,
     html`<input
         id="${id}-phone"
         name="phone"
@@ -20,13 +20,13 @@ export default (id, submitText = 'Отправить') => ({
         pattern="^\\+7\\(\\d{3}\\)\\d{7}$"
         required
       />
-      <label class="visually-hidden" for="${id}-phone">Телефон</label>`,
+      <label for="${id}-phone">Телефон</label>`,
     html`<textarea
         id="${id}-message"
         name="message"
         placeholder="Ваш вопрос"
       ></textarea>
-      <label class="visually-hidden" for="${id}-message">Ваш вопрос</label>`,
+      <label for="${id}-message">Ваш вопрос</label>`,
     html`<label>
       <input name="agree" type="checkbox" checked required />
       Я согласен на обработку персональных данных

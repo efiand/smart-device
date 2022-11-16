@@ -100,16 +100,14 @@ input {
   &::-webkit-search-results-decoration {
     appearance: none;
   }
+}
 
-  // input[number] arrows removal
+// input[number] arrows removal
+input[type="number"] {
+  appearance: textfield;
+
   &::-webkit-outer-spin-button,
   &::-webkit-inner-spin-button {
-    margin: 0;
-
     appearance: none;
-  }
-
-  &[type="number"] {
-    appearance: textfield;
   }
 }
