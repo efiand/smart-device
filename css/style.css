@@ -660,7 +660,7 @@ input[type=number]::-webkit-inner-spin-button {
   width: 60px;
   height: 60px;
   background-color: #00b2ff;
-  background-image: url("../img/sprite_auto.svg#arrow-right");
+  background-image: url("../img/sprite.svg#arrow-right");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 5px;
@@ -716,13 +716,13 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .contacts__link--mailto::before {
-  -webkit-mask: url("../img/sprite_auto.svg#mailto") no-repeat center/100%;
-  mask: url("../img/sprite_auto.svg#mailto") no-repeat center/100%;
+  -webkit-mask: url("../img/sprite.svg#mailto") no-repeat center/100%;
+  mask: url("../img/sprite.svg#mailto") no-repeat center/100%;
 }
 
 .contacts__link--tel::before {
-  -webkit-mask: url("../img/sprite_auto.svg#tel") no-repeat center/100%;
-  mask: url("../img/sprite_auto.svg#tel") no-repeat center/100%;
+  -webkit-mask: url("../img/sprite.svg#tel") no-repeat center/100%;
+  mask: url("../img/sprite.svg#tel") no-repeat center/100%;
 }
 
 .contacts__text {
@@ -1272,7 +1272,7 @@ b + .logo__description {
   height: 40px;
   color: inherit;
   background-color: rgba(255, 255, 255, 0);
-  background-image: url("../img/sprite_auto.svg#close");
+  background-image: url("../img/sprite.svg#close");
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: 20px;
@@ -1435,15 +1435,15 @@ b + .logo__description {
 }
 
 .socials__link--ok {
-  background-image: url("../img/sprite_auto.svg#social-ok");
+  background-image: url("../img/sprite.svg#social-ok");
 }
 
 .socials__link--vk {
-  background-image: url("../img/sprite_auto.svg#social-vk");
+  background-image: url("../img/sprite.svg#social-vk");
 }
 
 .socials__link--pinterest {
-  background-image: url("../img/sprite_auto.svg#social-pinterest");
+  background-image: url("../img/sprite.svg#social-pinterest");
 }
 
 .spoiler__heading {
