@@ -27,7 +27,7 @@ const svgo = () =>
 const sprite = () =>
   gulp
     .src('source/img/sprite/*.svg')
-    .pipe(stacksvg({output: 'sprite_auto'}))
+    .pipe(stacksvg({output: 'sprite'}))
     .pipe(gulp.dest('build/img'));
 
 /*

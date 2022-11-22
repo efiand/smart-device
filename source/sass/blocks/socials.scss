@@ -16,14 +16,14 @@
   @include default-interactive;
 
   &--ok {
-    background-image: url("../img/sprite_auto.svg#social-ok");
+    background-image: url("../img/sprite.svg#social-ok");
   }
 
   &--vk {
-    background-image: url("../img/sprite_auto.svg#social-vk");
+    background-image: url("../img/sprite.svg#social-vk");
   }
 
   &--pinterest {
-    background-image: url("../img/sprite_auto.svg#social-pinterest");
+    background-image: url("../img/sprite.svg#social-pinterest");
   }
 }
