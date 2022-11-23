@@ -3,7 +3,11 @@ export default (formElement, id = 0) => {
   let storageSupported = false;
 
   fieldElements.forEach((fieldElement) => {
-    const {name, type} = fieldElement;
+    const {
+      dataset: {mask},
+      name,
+      type,
+    } = fieldElement;
 
     if (type === 'password') {
       return;
@@ -22,14 +26,8 @@ export default (formElement, id = 0) => {
       // Do nothing
     }
 
-    if (type === 'tel') {
-      window.Maska.create(fieldElement, {
-        mask: '+7(###)#######',
-      });
-
-      if (!fieldElement.value) {
-        fieldElement.value = '+7(';
-      }
+    if (mask) {
+      window.Maska.create(fieldElement, {mask});
     }
 
     fieldElement.addEventListener('change', () => {
