@@ -25,7 +25,7 @@ export default {
   },
   callbackLink: {
     title: 'Заказать звонок',
-    url: 'backcall.html',
+    url: 'callback.html',
   },
   contacts: [
     {
@@ -57,7 +57,6 @@ export default {
       url: '#!',
     })),
   },
-  slogan: 'умные технологии',
   socials: [
     {
       id: 'ok',

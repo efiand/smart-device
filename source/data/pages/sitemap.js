@@ -4,7 +4,7 @@ const pages = [
     title: 'Главная страница',
   },
   {
-    id: 'backcall',
+    id: 'callback',
     title: 'Страница заказа звонка',
   },
   {
