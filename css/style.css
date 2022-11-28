@@ -2120,6 +2120,13 @@ input[type=number]::-webkit-inner-spin-button {
   }
 }
 
+@media (max-width: 360px) {
+  .main-header__image {
+    left: 0;
+    width: 100%;
+  }
+}
+
 @media (hover: hover) {
   .btn:hover,
   .btn:hover:not(.focus-visible) {
