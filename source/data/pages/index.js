@@ -92,6 +92,8 @@ export default {
       immediately: true,
       webp: 'img/main-header.webp',
       webp2x: 'img/main-header@2x.webp',
+      webpMobile: 'img/main-header-mobile.webp',
+      webpMobile2x: 'img/main-header-mobile@2x.webp'
     },
     link: {
       mobileTitle: 'бесплатная консультация',

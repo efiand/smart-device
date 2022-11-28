@@ -47,6 +47,11 @@
     left: -230px; // Pixelperfect
     width: 1220px; // Pixelperfect
   }
+
+  @include vp-360 {
+    left: 0;
+    width: 100%;
+  }
 }
 
 .main-header__container {
