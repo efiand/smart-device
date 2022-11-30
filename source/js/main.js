@@ -24,7 +24,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const accordeonElements = document.querySelectorAll('[data-accordeon]');
     accordeonElements.forEach(initAccordeon);
 
-    document.querySelectorAll('form').forEach(initForm);
+    document.querySelectorAll('[data-form]').forEach(initForm);
 
     initModals();
   });
