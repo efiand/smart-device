@@ -16,7 +16,6 @@ export default (id, submitText = 'Отправить') => ({
         id="${id}-phone"
         name="phone"
         type="tel"
-        value="+7("
         placeholder="Телефон"
         pattern="^\\+7\\(\\d{3}\\)\\d{7}$"
         data-mask="+7(###)#######"
