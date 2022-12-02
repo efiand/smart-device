@@ -2032,7 +2032,6 @@ input[type=number]::-webkit-inner-spin-button {
   }
 
   .page-header__logo {
-    position: relative;
     width: 35px;
     height: 35px;
     overflow: hidden;
@@ -2040,9 +2039,6 @@ input[type=number]::-webkit-inner-spin-button {
   }
 
   .page-header__logo img {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: auto;
     max-width: none;
     height: 100%;
