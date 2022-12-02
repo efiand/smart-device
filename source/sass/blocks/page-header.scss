@@ -32,16 +32,12 @@
   }
 
   @include vp-767 {
-    position: relative;
     width: 35px;
     height: 35px;
     overflow: hidden;
     transform: none;
 
     img {
-      position: absolute;
-      top: 0;
-      left: 0;
       width: auto;
       max-width: none;
       height: 100%;
